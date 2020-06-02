@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "name": "Martin",
+        "lastname": "Brown",
+        "courseId": 2
+    },
+    {
+        "id": 1,
+        "name": "Wilson",
+        "lastname": "Anderson",
+        "courseId": 0
+    },
+    {
+        "id": 2,
+        "name": "Harry",
+        "lastname": "Miller",
+        "courseId": 3
+    },
+    {
+        "id": 3,
+        "name": "Lily",
+        "lastname": "Smith",
+        "courseId": 1
+    },
+    {
+        "id": 4,
+        "name": "Oscar",
+        "lastname": "Davis",
+        "courseId": 0
+    },
+    {
+        "id": 5,
+        "name": "Oliver",
+        "lastname": "Taylor",
+        "courseId": 3
+    }
+]

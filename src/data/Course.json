@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "name": "JavaScript for beginners",
+        "description": "Javascript: Learn complete javascript from basics concepts to advanced with examples!"
+    },
+    {
+        "id": 1,
+        "name": " The Complete Node.js Developer Course ",
+        "description": "Learn Node.js by building real-world applications with Node, Express, MongoDB, Jest, and more!"
+    },
+    {
+        "id": 2,
+        "name": "React - The Complete Guide",
+        "description": "Dive in and learn React.js from scratch! Learn Reactjs, Hooks, Redux, React Routing, Animations, Next.js and way more!"
+    },
+    {
+        "id": 3,
+        "name": "GraphQL with React: The Complete Developers Guide",
+        "description": "Learn and master GraphQL by building real web apps with React and Node!"
+    }
+]
