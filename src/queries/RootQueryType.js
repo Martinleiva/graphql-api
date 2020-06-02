@@ -6,9 +6,9 @@ const {
     GraphQLInt
 } = require('graphql');
 
-const courses = require('../data/Course.json');
-const students = require('../data/Student.json');
-const grades = require('../data/Grade.json');
+const courses = require('../../data/Course.json');
+const students = require('../../data/Student.json');
+const grades = require('../../data/Grade.json');
 
 const CourseType = new GraphQLObjectType({
     name: 'Course',
