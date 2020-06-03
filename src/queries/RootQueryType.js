@@ -1,64 +1,16 @@
 const {
     GraphQLObjectType,
-    GraphQLString,
     GraphQLList,
-    GraphQLNonNull,
     GraphQLInt
 } = require('graphql');
+
+const CourseType = require('../types/courseType');
+const StudentType = require('../types/studentType');
+const GradeType = require('../types/gradeType');
 
 const courses = require('../../data/Course.json');
 const students = require('../../data/Student.json');
 const grades = require('../../data/Grade.json');
-
-const CourseType = new GraphQLObjectType({
-    name: 'Course',
-    description: 'Represent courses',
-    fields: () => ({
-        id: { type: GraphQLNonNull(GraphQLInt) },
-        name: { type: GraphQLNonNull(GraphQLString) },
-        description: { type: GraphQLNonNull(GraphQLString) }
-    })
-});
-
-const StudentType = new GraphQLObjectType({
-    name: 'Student',
-    description: 'Represent students',
-    fields: () => ({
-        id: { type: GraphQLNonNull(GraphQLInt) },
-        name: { type: GraphQLNonNull(GraphQLString) },
-        lastname: { type: GraphQLNonNull(GraphQLString) },
-        courseId: { type: GraphQLNonNull(GraphQLInt) },
-        course: {
-            type: CourseType,
-            resolve: (student) => {
-                return courses.find(course => course.id === student.courseId)
-            }
-        }
-    })
-});
-
-const GradeType = new GraphQLObjectType({
-    name: 'Grade',
-    description: 'Represent grades',
-    fields: () => ({
-        id: { type: GraphQLNonNull(GraphQLInt) },
-        courseId: { type: GraphQLNonNull(GraphQLInt) },
-        course: {
-            type: CourseType,
-            resolve: (grade) => {
-                return courses.find(course => course.id === grade.courseId)
-            }
-        },
-        studentId: { type: GraphQLNonNull(GraphQLInt) },
-        student: {
-            type: StudentType,
-            resolve: (grade) => {
-                return students.find(student => student.id === grade.studentId)
-            }
-        },
-        grade: { type: GraphQLNonNull(GraphQLInt) }
-    })
-});
 
 const RootQueryType = new GraphQLObjectType({
     name: 'Query',
